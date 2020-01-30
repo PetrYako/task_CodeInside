@@ -13,7 +13,5 @@ public class Task2 {
     public static void main(String[] args) throws InterruptedException {
         EmailService emailService = new EmailService();
         emailService.send(getMessages());
-        Thread.sleep(1000);
-        emailService.send(getMessages());
     }
 }

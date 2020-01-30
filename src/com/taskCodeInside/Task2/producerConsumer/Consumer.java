@@ -20,6 +20,7 @@ public class Consumer implements Runnable {
         try {
             while (queue.size() != 0) {
                 Message message = queue.take();
+                Thread.sleep(500);
                 service.postMessage(message);
             }
         } catch (InterruptedException e) { e.printStackTrace(); }
