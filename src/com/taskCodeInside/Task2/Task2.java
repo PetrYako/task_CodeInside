@@ -10,8 +10,10 @@ import static com.taskCodeInside.Task2.util.TestUtil.getMessages;
 
 public class Task2 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         EmailService emailService = new EmailService();
+        emailService.send(getMessages());
+        Thread.sleep(1000);
         emailService.send(getMessages());
     }
 }
